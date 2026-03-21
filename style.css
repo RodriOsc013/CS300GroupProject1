@@ -1,0 +1,156 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ROOT */
+:root {
+    --bg: #0f1115;
+    --card: #1a1d23;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --accent: #3b82f6;
+}
+
+/* BASE */
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.container {
+    width: 100%;
+    padding: 1rem;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #0c0e12;
+    border-bottom: 1px solid #222;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* SHOW nav on mobile now */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* HERO */
+.hero {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+}
+
+/* BUTTON */
+.btn {
+    background: var(--accent);
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* SERVICES */
+.services {
+    padding: 2rem 0;
+}
+
+.service-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.card {
+    background: var(--card);
+    padding: 1.2rem;
+    border-radius: 6px;
+    border: 1px solid #2a2d34;
+}
+
+/* CONTACT */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.contact input,
+.contact textarea {
+    padding: 0.7rem;
+    background: #111318;
+    border: 1px solid #2a2d34;
+    color: white;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid #222;
+    color: var(--muted);
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+
+    .container {
+        padding: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+
+    .container {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .hero {
+        text-align: left;
+        padding: 4rem 0;
+    }
+
+    .hero h2 {
+        font-size: 2.8rem;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
