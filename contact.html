@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Business</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-content">
+            <h1 class="logo">Business</h1>
+            <nav>
+                <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <ul id="primary-navigation" class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero contact-hero">
+            <div class="container">
+                <p class="eyebrow">Contact</p>
+                <h2>Get in touch with our team</h2>
+                <p>We’re here Monday through Saturday to answer questions, scope projects, and help you plan next steps.</p>
+            </div>
+        </section>
+
+        <section class="contact-page">
+            <div class="container contact-layout">
+                <div class="contact-card info">
+                    <div class="contact-card__header">Get In Touch With Us Now!</div>
+                    <div class="contact-info-grid">
+                        <div class="info-block">
+                            <div class="info-icon">☎</div>
+                            <h3>Phone Number</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                        <div class="info-block">
+                            <div class="info-icon">✉</div>
+                            <h3>Email</h3>
+                            <p>hello@business.com<br>sales@business.com</p>
+                        </div>
+                        <div class="info-block">
+                            <div class="info-icon">📍</div>
+                            <h3>Location</h3>
+                            <p>123 Market Street<br>San Francisco, CA 94105</p>
+                        </div>
+                        <div class="info-block">
+                            <div class="info-icon">🕒</div>
+                            <h3>Working Hours</h3>
+                            <p>Monday to Saturday<br>09:00 AM – 06:00 PM PT</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-card form">
+                    <div class="contact-card__header">Contact Us</div>
+                    <form class="contact-form-grid" id="contactForm">
+                        <label class="form-field">
+                            <span>First Name *</span>
+                            <input type="text" name="firstName" required>
+                        </label>
+                        <label class="form-field">
+                            <span>Last Name *</span>
+                            <input type="text" name="lastName" required>
+                        </label>
+                        <label class="form-field">
+                            <span>Mobile No *</span>
+                            <input type="tel" name="phone" required>
+                        </label>
+                        <label class="form-field">
+                            <span>Email ID *</span>
+                            <input type="email" name="email" required>
+                        </label>
+                        <label class="form-field full">
+                            <span>Message</span>
+                            <textarea name="message" rows="4" placeholder="How can we help?" required></textarea>
+                        </label>
+                        <label class="form-field full">
+                            <span>Please type the characters *</span>
+                            <div class="captcha-row">
+                                <input type="text" name="captcha" id="captchaInput" autocomplete="off" required>
+                                <span class="captcha-text" id="captchaText" aria-live="polite"></span>
+                                <button type="button" class="captcha-refresh" id="captchaRefresh" aria-label="Refresh captcha">↻</button>
+                            </div>
+                        </label>
+                        <div class="form-field full submit-row">
+                            <small>This helps us prevent spam, thank you.</small>
+                            <button type="submit" class="btn">Submit ↗</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Business. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js" defer></script>
+    <script src="contact.js" defer></script>
+
+</body>
+</html>
