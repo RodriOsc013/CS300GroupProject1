@@ -13,7 +13,12 @@
         <div class="container nav-content">
             <h1 class="logo">Business</h1>
             <nav>
-                <ul class="nav-links">
+                <!-- Hamburger toggle for small screens -->
+                <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul id="primary-navigation" class="nav-links">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">About</a></li>
@@ -84,5 +89,9 @@
         </div>
     </footer>
 
-</body>
+    </footer>
+
+    <!-- JavaScript for the mobile nav hamburger -->
+    <script src="script.js"></script>
+    </body>
 </html>

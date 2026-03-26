@@ -1,9 +1,4 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 /* ROOT */
 :root {
@@ -11,6 +6,7 @@
     --card: #1a1d23;
     --text: #e5e7eb;
     --muted: #9ca3af;
+    
     --accent: #3b82f6;
 }
 
@@ -24,6 +20,46 @@ body {
 .container {
     width: 100%;
     padding: 1rem;
+
+/* --- Mobile hamburger styles --- */
+.nav-toggle {
+    display: none; /* shown on small screens only */
+    background: none;
+    border: none;
+    padding: 0.25rem;
+    cursor: pointer;
+}
+
+.nav-toggle .hamburger {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    position: relative;
+}
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+}
+.nav-toggle .hamburger::before { top: -7px; }
+.nav-toggle .hamburger::after  { top: 7px; }
+
+@media (max-width: 768px) {
+    .nav-toggle { display: inline-block; }
+
+    /* hide the regular horizontal nav and show vertical when open */
+    .nav-links { display: none; flex-direction: column; gap: 0.75rem; }
+    .nav-links.open { display: flex; }
+
+    .nav-content { gap: 0.5rem; }
+
+    .nav-links a { display: block; padding: 0.5rem 0; }
+}
 }
 
 /* NAVBAR */
