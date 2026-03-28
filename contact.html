@@ -3,38 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business | Contact</title>
+    <title>Contact | Lumen Digital</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="navbar">
-    <div class="container nav-content">
-        <h1 class="logo">Business</h1>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-</header>
-<section class="contact">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <form action="#" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" placeholder="Message" required></textarea>
-            <button type="submit" class="button">Send</button>
-        </form>
-    </div>
-</section>
-<footer class="footer">
-    <div class="container">
-        <p>© 2026 Business. All rights reserved.</p>
-    </div>
-</footer>
+    <header class="navbar">
+        <div class="container nav-content">
+            <h1 class="logo">Lumen Digital</h1>
+            <nav>
+                <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <ul id="primary-navigation" class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero contact-hero">
+            <div class="container">
+                <p class="eyebrow">Contact</p>
+                <h2>Tell us about your next digital product.</h2>
+                <p>We collaborate with design-mature teams, founders, and product orgs who need a strategic partner from the first sketch to launch.</p>
+            </div>
+        </section>
+
+        <section class="contact-page">
+            <div class="container contact-layout">
+                <div class="contact-card info">
+                    <div class="contact-card__header">Let’s make something purposeful</div>
+                    <div class="contact-info-grid">
+                        <div class="info-block">
+                            <div class="info-icon">☎</div>
+                            <h3>Phone Number</h3>
+                            <p>+44 7713 870 569</p>
+                        </div>
+                        <div class="info-block">
+                            <div class="info-icon">✉</div>
+                            <h3>Email</h3>
+                            <p>hello@lumendigital.studio<br>projects@lumendigital.studio</p>
+                        </div>
+                        <div class="info-block">
+                            <div class="info-icon">📍</div>
+                            <h3>Location</h3>
+                            <p>Unit 19 FF, The Factory<br>Castle Mills, Kendal LA9 7DE</p>
+                        </div>
+                        <div class="info-block">
+                            <div class="info-icon">🕒</div>
+                            <h3>Working Hours</h3>
+                            <p>Monday to Friday<br>08:00 – 18:00 GMT</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-card form">
+                    <div class="contact-card__header">Project kick-off form</div>
+                    <form class="contact-form-grid" id="contactForm">
+                        <label class="form-field">
+                            <span>First Name *</span>
+                            <input type="text" name="firstName" required>
+                        </label>
+                        <label class="form-field">
+                            <span>Last Name *</span>
+                            <input type="text" name="lastName" required>
+                        </label>
+                        <label class="form-field">
+                            <span>Mobile No *</span>
+                            <input type="tel" name="phone" required>
+                        </label>
+                        <label class="form-field">
+                            <span>Email ID *</span>
+                            <input type="email" name="email" required>
+                        </label>
+                        <label class="form-field full">
+                            <span>Message</span>
+                            <textarea name="message" rows="4" placeholder="What product or experience should we design?" required></textarea>
+                        </label>
+                        <label class="form-field full">
+                            <span>Please type the characters *</span>
+                            <div class="captcha-row">
+                                <input type="text" name="captcha" id="captchaInput" autocomplete="off" required>
+                                <span class="captcha-text" id="captchaText" aria-live="polite"></span>
+                                <button type="button" class="captcha-refresh" id="captchaRefresh" aria-label="Refresh captcha">↻</button>
+                            </div>
+                        </label>
+                        <div class="form-field full submit-row">
+                            <small>This helps us prevent spam, thank you.</small>
+                            <button type="submit" class="btn">Share project ↗</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-top">
+            <div class="footer-panel footer-about">
+                <p class="footer-heading">About</p>
+                <p>Lumen Digital is a multidisciplinary design studio shaping brands, products, and immersive interfaces for bold companies. We translate complex problems into elegant systems people love to use.</p>
+            </div>
+            <div class="footer-panel footer-services">
+                <p class="footer-heading">Services</p>
+                <ul>
+                    <li>UX Research &amp; Strategy</li>
+                    <li>Product &amp; Interface Design</li>
+                    <li>Brand Identity Systems</li>
+                    <li>Design System Architecture</li>
+                    <li>Content &amp; Narrative Design</li>
+                    <li>Motion &amp; Prototyping</li>
+                    <li>Creative Direction</li>
+                    <li>Launch Readiness Workshops</li>
+                </ul>
+            </div>
+            <div class="footer-panel footer-subscribe">
+                <p class="footer-heading">Subscribe to our newsletter</p>
+                <form class="subscribe-form">
+                    <label class="sr-only" for="newsletter-email-contact">Email</label>
+                    <input id="newsletter-email-contact" type="email" name="email" placeholder="Email" required>
+                    <button type="submit" class="btn btn-outline">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <div class="footer-panel footer-contact">
+                <p class="footer-heading">Contact</p>
+                <dl>
+                    <div>
+                        <dt>T:</dt>
+                        <dd>+44 7713 870 569</dd>
+                    </div>
+                    <div>
+                        <dt>E:</dt>
+                        <dd>hello@lumendigital.studio</dd>
+                    </div>
+                    <div>
+                        <dt>A:</dt>
+                        <dd>Unit 19 FF, The Factory, Castle Mills, Kendal LA9 7DE</dd>
+                    </div>
+                </dl>
+            </div>
+            <div class="footer-panel footer-nav">
+                <a href="services.html">Services</a>
+                <a href="#">Case Studies</a>
+                <a href="about.html">Studio</a>
+                <a href="#">Journal</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js" defer></script>
+    <script src="contact.js" defer></script>
+
 </body>
 </html>

@@ -11,7 +11,10 @@
     <div class="container nav-content">
         <h1 class="logo">Business</h1>
         <nav>
-            <ul class="nav-links">
+           <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+                <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="projects.html">Projects</a></li>
@@ -42,12 +45,166 @@
         </div>
     </div>
 </section>
+<main>
+        <section class="hero services-hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Design Partnerships</p>
+                    <h2>Scale your product with <span>end-to-end</span> design expertise.</h2>
+                    <p>We plug in as an autonomous design squad—leading research, creating magnetic brand systems, and prototyping interfaces that align product, engineering, and marketing.</p>
+                    <div class="hero-cta">
+                        <a href="contact.html" class="btn btn-dark">Let’s Talk</a>
+                        <div class="hero-metrics">
+                            <div>
+                                <strong>180+</strong>
+                                <small>Experiments shipped</small>
+                            </div>
+                            <div>
+                                <strong>95%</strong>
+                                <small>Client retention</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-float badge-one">180+ experiments shipped</div>
+                    <div class="hero-float badge-two">95% client retention</div>
+                    <div class="hero-avatar-group">
+                        <div class="avatar"></div>
+                        <div class="avatar"></div>
+                        <div class="avatar"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="services-wheel">
+            <div class="container">
+                <div class="wheel-header">
+                    <div>
+                        <p class="eyebrow">What we craft</p>
+                        <h3>Rotating capabilities designed for modern product teams</h3>
+                        <p class="subtext">Tap through to see how we weave research, storytelling, and systems thinking into every engagement.</p>
+                    </div>
+                    <div class="wheel-controls">
+                        <button class="wheel-btn" id="wheelPrev" aria-label="Previous service">&#8249;</button>
+                        <button class="wheel-btn" id="wheelNext" aria-label="Next service">&#8250;</button>
+                    </div>
+                </div>
+                <div class="wheel-track" id="serviceWheel">
+                    <article class="wheel-card">
+                        <div class="wheel-icon">✨</div>
+                        <h4>Product Experience</h4>
+                        <p>Signature product flows, onboarding, and multi-surface experiences aligned to measurable outcomes.</p>
+                        <ul>
+                            <li>Customer &amp; stakeholder interviews</li>
+                            <li>Journey mapping &amp; prioritization</li>
+                            <li>High-fidelity prototyping</li>
+                        </ul>
+                    </article>
 
-<footer class="footer">
-    <div class="container">
-        <p>© 2026 Business. All rights reserved.</p>
-    </div>
-</footer>
+                    <article class="wheel-card">
+                        <div class="wheel-icon">�</div>
+                        <h4>Design Systems</h4>
+                        <p>Component libraries, tokens, and governance models that give teams a single source of design truth.</p>
+                        <ul>
+                            <li>Audit &amp; gap analysis</li>
+                            <li>Token architecture + accessibility</li>
+                            <li>Documentation &amp; enablement</li>
+                        </ul>
+                    </article>
+                    <article class="wheel-card">
+                        <div class="wheel-icon">🌀</div>
+                        <h4>Brand Identity</h4>
+                        <p>Modular brand systems expressed through typography, color, and motion built for digital-first teams.</p>
+                        <ul>
+                            <li>Narrative + messaging pillars</li>
+                            <li>Visual identity &amp; art direction</li>
+                            <li>Launch toolkits &amp; playbooks</li>
+                        </ul>
+                    </article>
+                    <article class="wheel-card">
+                        <div class="wheel-icon">🧠</div>
+                        <h4>Content &amp; Narrative</h4>
+                        <p>Clear product storytelling, UX writing, and modular content models for marketing and in-product education.</p>
+                        <ul>
+                            <li>Voice &amp; tone systems</li>
+                            <li>Information architecture</li>
+                            <li>Guides, demos, and scripts</li>
+                        </ul>
+                    </article>
+
+                    <article class="wheel-card">
+                        <div class="wheel-icon">🤝</div>
+                        <h4>Embedded Partners</h4>
+                        <p>Dedicated squads that sit beside your team to lead discovery, build alignment, and launch confidently.</p>
+                        <ul>
+                            <li>Fractional design leadership</li>
+                            <li>Research &amp; co-creation workshops</li>
+                            <li>Partner enablement &amp; training</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-top">
+            <div class="footer-panel footer-about">
+                <p class="footer-heading">About</p>
+                <p>Lumen Digital is a multidisciplinary design studio shaping brands, products, and immersive interfaces for bold companies. We translate complex problems into elegant systems people love to use.</p>
+            </div>
+            <div class="footer-panel footer-services">
+                <p class="footer-heading">Services</p>
+                <ul>
+                    <li>UX Research &amp; Strategy</li>
+                    <li>Product &amp; Interface Design</li>
+                    <li>Brand Identity Systems</li>
+                    <li>Design System Architecture</li>
+                    <li>Content &amp; Narrative Design</li>
+                    <li>Motion &amp; Prototyping</li>
+                    <li>Creative Direction</li>
+                    <li>Launch Readiness Workshops</li>
+                </ul>
+            </div>
+            <div class="footer-panel footer-subscribe">
+                <p class="footer-heading">Subscribe to our newsletter</p>
+                <form class="subscribe-form">
+                    <label class="sr-only" for="newsletter-email-services">Email</label>
+                    <input id="newsletter-email-services" type="email" name="email" placeholder="Email" required>
+                    <button type="submit" class="btn btn-outline">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <div class="footer-panel footer-contact">
+                <p class="footer-heading">Contact</p>
+                <dl>
+                    <div>
+                        <dt>T:</dt>
+                        <dd>+44 7713 870 569</dd>
+                    </div>
+                    <div>
+                        <dt>E:</dt>
+                        <dd>hello@lumendigital.studio</dd>
+                    </div>
+                    <div>
+                        <dt>A:</dt>
+                        <dd>Unit 19 FF, The Factory, Castle Mills, Kendal LA9 7DE</dd>
+                    </div>
+                </dl>
+            </div>
+            <div class="footer-panel footer-nav">
+                <a href="services.html">Services</a>
+                <a href="#">Case Studies</a>
+                <a href="about.html">Studio</a>
+                <a href="#">Journal</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script src="services.js" defer></script>
 
 </body>
 </html>

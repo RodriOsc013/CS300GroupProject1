@@ -1,8 +1,20 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* ROOT */
+:root {
+    --bg: #0f1115;
+    --card: #1a1d23;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --accent: #3b82f6;
+}
+
+/* BASE */
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
@@ -13,6 +25,46 @@ body {
     max-width: 1024px;
     margin: auto;
     padding: 1rem;
+
+/* --- Mobile hamburger styles --- */
+.nav-toggle {
+    display: none; /* shown on small screens only */
+    background: none;
+    border: none;
+    padding: 0.25rem;
+    cursor: pointer;
+}
+
+.nav-toggle .hamburger {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    position: relative;
+}
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+}
+.nav-toggle .hamburger::before { top: -7px; }
+.nav-toggle .hamburger::after  { top: 7px; }
+
+@media (max-width: 768px) {
+    .nav-toggle { display: inline-block; }
+
+    /* hide the regular horizontal nav and show vertical when open */
+    .nav-links { display: none; flex-direction: column; gap: 0.75rem; }
+    .nav-links.open { display: flex; }
+
+    .nav-content { gap: 0.5rem; }
+
+    .nav-links a { display: block; padding: 0.5rem 0; }
+}
 }
 .navbar {
     background: #222;
@@ -48,7 +100,31 @@ body {
 }
 .hero {
     text-align: center;
-    padding: 2rem 1rem;
+}
+
+.hero h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+}
+
+/* BUTTON */
+.btn {
+    background: var(--accent);
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* SERVICES */
+.services {
+    padding: 2rem 0;
 }
 .service-grid {
     display: grid;
@@ -85,12 +161,8 @@ body {
     text-decoration: none;
     border-radius: 5px;
 }
-.button:hover {
-    background: #005ecc;
-}
-section {
-    margin-bottom: 2rem;
-}
+
+/* CONTACT */
 .contact form {
     display: flex;
     flex-direction: column;
@@ -103,9 +175,8 @@ section {
     border-radius: 5px;
     font-size: 1rem;
 }
-.contact textarea {
-    min-height: 120px;
-}
+
+/* FOOTER */
 .footer {
     background: #222;
     color: white;
@@ -124,6 +195,22 @@ section {
     .service-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .services-hero .hero-grid {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .hero-cta {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .wheel-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
 }
 @media (min-width: 1024px) {
     .nav-content {
@@ -132,5 +219,81 @@ section {
     }
     .service-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-hero,
+    .contact-hero .container {
+        text-align: center;
+    }
+
+    .contact-layout {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact-info-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .info-block {
+        border-bottom: none;
+        border-right: 1px solid #e4e8f5;
+        padding-bottom: 0;
+    }
+
+    .info-block:nth-child(2n) {
+        border-right: none;
+    }
+}
+
+/* ABOUT PAGE */
+
+.about-page {
+    padding: 3rem 0;
+}
+
+.about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 360px;
+    border-radius: 12px;
+    border: 1px solid #2a2d34;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.about-content {
+    flex: 1.2;
+}
+
+.about-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+
+    .about-grid {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .about-image {
+        justify-content: flex-start;
     }
 }
