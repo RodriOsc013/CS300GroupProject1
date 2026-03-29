@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- NAVBAR -->
     <header class="navbar">
         <div class="container nav-content">
             <h1 class="logo">Business</h1>
             <nav>
-                <ul class="nav-links">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <ul id="primary-navigation" class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="projects.html">Projects</a></li>
@@ -22,26 +24,28 @@
             </nav>
         </div>
     </header>
-    <!-- PROJECTS -->
-<section class="projects">
-    <div class="container">
-        <h1>Our Projects</h1>
-        <div class="service-grid">
-            <div class="card">
-                <img src="images/about-placeholder.svg" alt="Project Alpha">
-                <h3>Project Alpha</h3>
-                <p>A cutting-edge solution for modern businesses.</p>
-            </div>
-            <div class="card">
-                <img src="images/rackmodel.jpg" alt="Project Beta">
-                <h3>Project Beta</h3>
-                <p>Innovative platform to streamline operations.</p>
-            </div>
-            <div class="card">
-                <img src="images/coinmodel.jpg" alt="Project Gamma">
-                <h3>Project Gamma</h3>
-                <p>Next-gen tool for data-driven decision making.</p>
+    <section class="projects">
+        <div class="container">
+            <h1>Our Projects</h1>
+            <div class="service-grid">
+                <div class="card">
+                    <img src="images/about-placeholder.svg" alt="Project Alpha">
+                    <h3>Project Alpha</h3>
+                    <p>A cutting-edge solution for modern businesses.</p>
+                </div>
+                <div class="card">
+                    <img src="images/rackmodel.jpg" alt="Project Beta">
+                    <h3>Project Beta</h3>
+                    <p>Innovative platform to streamline operations.</p>
+                </div>
+                <div class="card">
+                    <img src="images/coinmodel.jpg" alt="Project Gamma">
+                    <h3>Project Gamma</h3>
+                    <p>Next-gen tool for data-driven decision making.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    <script src="script.js" defer></script>
+</body>
+</html>

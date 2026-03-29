@@ -1,4 +1,3 @@
-// Mobile nav toggle script
 (function () {
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.getElementById('primary-navigation');
@@ -24,22 +23,16 @@
     e.preventDefault();
     toggleNav();
   });
-
-  // Close menu when pressing Escape
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' || e.key === 'Esc') {
       closeNav();
-      // move focus back to the toggle so keyboard users are in a sensible place
       toggle.focus();
     }
   });
-
-  // Optional: close nav when clicking outside of it (gesture-friendly)
   document.addEventListener('click', function (e) {
     const isClickInside = nav.contains(e.target) || toggle.contains(e.target);
     if (!isClickInside) {
       closeNav();
     }
   });
-
 })();

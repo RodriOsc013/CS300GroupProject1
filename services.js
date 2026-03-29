@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     };
-
     const goPrev = () => {
         activeIndex = getPrevIndex();
         renderWheel();
