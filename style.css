@@ -399,6 +399,40 @@ body {
     text-align: center;
     padding: 1rem;
 }
+.theme-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+body {
+    transition: background 0.3s ease, color 0.3s ease;
+}
+body.dark-mode {
+    background: var(--bg);
+    color: var(--text);
+}
+body.dark-mode .card {
+    background: var(--card);
+    color: var(--text);
+}
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: var(--text);
+}
+body.dark-mode .navbar {
+    background: #000;
+}
+body.dark-mode input,
+body.dark-mode textarea {
+    background: #111;
+    color: white;
+}
 @media (min-width: 768px) {
     .nav-links {
         display: flex;
