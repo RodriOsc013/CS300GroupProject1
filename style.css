@@ -138,6 +138,18 @@ body {
     color: var(--muted);
     margin-bottom: 1.5rem;
 }
+.hero-home .eyebrow,
+.hero-home p {
+    color: #111;
+}
+.services-hero .eyebrow,
+.services-hero .hero-copy > p {
+    color: #111;
+}
+.contact-hero .eyebrow,
+.contact-hero p {
+    color: #111;
+}
 .btn {
     background: var(--accent);
     color: white;
@@ -153,6 +165,46 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+}
+.contact {
+    padding: 3rem 0;
+}
+.contact form {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.project-form__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.project-form input,
+.project-form textarea {
+    width: 100%;
+    padding: 0.95rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f3f4f6;
+}
+.project-form input:focus,
+.project-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: #fff;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15);
+}
+.project-form__brief {
+    min-height: 220px;
+    resize: vertical;
+}
+@media (min-width: 640px) {
+    .project-form__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
 }
 .card {
     background: white;
@@ -188,6 +240,11 @@ body {
     padding: 4rem 0 5rem;
     background: #0f1115;
     overflow: hidden;
+}
+.services-wheel .wheel-header .eyebrow,
+.services-wheel .wheel-header h3,
+.services-wheel .wheel-header .subtext {
+    color: #fff;
 }
 .wheel-header {
     display: flex;
